@@ -70,6 +70,20 @@ The project includes K6 load testing configuration. To run the load tests:
 k6 run --env PDF_PATH=/path/to/your/test.pdf ./k6.js
 ```
 
+## Docker
+
+Build
+
+```sh
+docker build . -t pdf2images:latest
+```
+
+Run
+
+```sh
+docker run -p 8787:8787 --rm pdf2images:latest
+```
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
