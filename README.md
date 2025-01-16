@@ -1,4 +1,4 @@
-# PDF to WebP conversion api
+# pdf2images: PDF to WebP conversion service
 
 A high-performance REST API service built with Deno that converts PDF documents to WebP images. The service processes PDFs, optimizes the images with Sharp, and returns a ZIP archive containing WebP images for each page.
 
@@ -83,6 +83,27 @@ Run
 ```sh
 docker run -p 8787:8787 --rm pdf2images:latest
 ```
+
+## Deploy to azure container apps
+
+You should have az cli installed with a resource group and container registry initialized
+
+1. Login to your ACR registry
+
+```bash
+ az acr login --name appregistry
+```
+
+2. Build and push the Docker image to ACR:
+
+```bash
+docker build -t <your-registry-name>.azurecr.io/pdf2images:latest .
+docker push <your-registry-name>.azurecr.io/pdf2images:latest
+```
+
+3. Deploy the container app using the UI
+
+Your API will now be accessible at the URL shown in the deployment output.
 
 ## License
 
