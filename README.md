@@ -97,7 +97,7 @@ You should have az cli installed with a resource group and container registry in
 2. Build and push the Docker image to ACR:
 
 ```bash
-docker build -t <your-registry-name>.azurecr.io/pdf2images:latest .
+docker build --platform linux/amd64 -t <your-registry-name>.azurecr.io/pdf2images:latest .
 docker push <your-registry-name>.azurecr.io/pdf2images:latest
 ```
 
