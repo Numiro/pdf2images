@@ -91,7 +91,7 @@ You should have az cli installed with a resource group and container registry in
 1. Login to your ACR registry
 
 ```bash
- az acr login --name appregistry
+ az acr login --name <your-registry-name>
 ```
 
 2. Build and push the Docker image to ACR:
